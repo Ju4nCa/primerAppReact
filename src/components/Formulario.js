@@ -29,7 +29,7 @@ enviar(e){
 }
   render(){
     return (
-    <div className="card">
+    <div className="card border-success">
       <form className="card-body" onSubmit={this.enviar}>
         <div className="form-group">
         <input

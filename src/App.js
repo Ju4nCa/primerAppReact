@@ -30,8 +30,8 @@ class App extends Component {
   render() {
     const object = this.state.todos.map((todo, i) => {
       return(
-        <div className="col md-4" key={i}>
-          <div className="card">
+        <div className="col-3 md-4 mt-4 text-center" key={i}>
+          <div className="card border-success">
             <div className="card-header">
             <h3>{todo.title}</h3>
             <span className="badge badge-pill badge-danger ml-2">
@@ -54,16 +54,16 @@ class App extends Component {
     });
     return (
       <div className="App">
-      <nav className="navbar-brand">
-      <p>Tareas - {this.state.todos.length}</p>
-      </nav>
-      <div className="container">
-          <div className="row md-4 mt-4">
-           <div className="card bg-primary shadow p-3 border-success mb-4">
-           <img src={logo} className="App-logo card-img-top" alt="logo"/>
+      <div className="container float-center">
+           <div className="
+           card float-left sticky-top
+           shadow-lg p-3 border-success mt-4 mr-4">
+           <p className="badge text-center">Tareas - {this.state.todos.length}</p>
+           <img src={logo} className="App-logo card-img-top w-75 h-75 mx-auto" alt="logo"/>
            <Formulario onAgregar = {this.agregar}/>
            </div>
-          {object}
+           <div className="row md-4">
+             {object}
           </div>
         </div>
       </div>
